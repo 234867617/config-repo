@@ -1,0 +1,24 @@
+#单例模式启动Eureka Server
+server:
+  port: 8761 #启动端口
+eureka:
+  client:
+    registerWithEureka: false #false:不作为一个客户端注册到注册中心
+    fetchRegistry: false  #位true是,可以启动但是报异常 Cannot execute request on any known server
+    #制定配置信息存储的git位置
+spring:
+  application:
+    name: cloud-server
+zuul:
+  prefix: /demo #公共前缀
+  routes:
+    cloud-client:
+      path: /usersystem/** 
+      servuceId: cloud-client
+ribbon:
+  eureka:
+   enavled:false #配置zuul路由时将此属性设为false
+ 
+cloud-client:
+  ribbon:
+    listOfServer: localhsot:8800 #为cloud-client服务指定一组服务地址，应该是用于负载均衡
