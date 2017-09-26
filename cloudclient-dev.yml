@@ -1,4 +1,5 @@
-
+name:
+  chenjiabin
 #eureka: 
   #instace:
     #statusPageUrlPath: ${management.context-path}/info
