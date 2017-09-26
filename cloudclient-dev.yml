@@ -1,6 +1,6 @@
 
-eureka: 
-  instace:
-    statusPageUrlPath: ${management.context-path}/info
-    healthCheckUrlPath: ${management.context-path}/health
+#eureka: 
+  #instace:
+    #statusPageUrlPath: ${management.context-path}/info
+    #healthCheckUrlPath: ${management.context-path}/health
 
